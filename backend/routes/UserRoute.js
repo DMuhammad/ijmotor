@@ -3,7 +3,7 @@ import { addUser, deleteUser, getSpecifiedUser, getUser, updateUser } from "../c
 
 const UserRoute = Router();
 UserRoute.get("/users", getUser);
-UserRoute.get("/login", getSpecifiedUser);
+UserRoute.get("/login/:username.:password", getSpecifiedUser);
 UserRoute.post("/register", addUser);
 UserRoute.patch("/users/:id", updateUser);
 UserRoute.delete("/users/:id", deleteUser);

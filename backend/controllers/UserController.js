@@ -17,8 +17,8 @@ const getSpecifiedUser = async(req, res) => {
     try {
         const response = await User.findOne({
             where: {
-                username: req.body.username,
-                password: md5(req.body.password)
+                username: req.params.username,
+                password: md5(req.params.password)
             }
         });
         res.send({
